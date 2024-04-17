@@ -29,7 +29,46 @@
 
 **Пример ответа:**
 
-`todo`
+```
+{
+    "products": [
+        {
+            "price": 699.99,
+            "color": "red",
+            "manufacturer": "dyson",
+            "year": 2022,
+            "type": "vacuum cleaner",
+            "modelName": "v11 torque drive"
+        },
+        {
+            "price": 1499.99,
+            "color": "black",
+            "manufacturer": "samsung",
+            "year": 2023,
+            "type": "monitor",
+            "modelName": "odyssey g9"
+        }
+    ],
+    "facets": {
+        "color": [
+            "red",
+            "black"
+        ],
+        "year": [
+            "2023",
+            "2022"
+        ],
+        "type": [
+            "vacuum cleaner",
+            "monitor"
+        ],
+        "manufacturer": [
+            "samsung",
+            "dyson"
+        ]
+    }
+}
+```
 
 ### Поиск продукта по айди
 
@@ -45,15 +84,16 @@
 
 **Пример ответа:**
 
-`{
-"id": 15,
+```
+{
 "price": 599.99,
 "color": "green",
 "manufacturer": "dyson",
 "year": 2021,
 "type": "vacuum cleaner",
 "modelName": "v11 torque drive"
-}`
+}
+```
 
 ### Добавление продукта
 
@@ -63,7 +103,8 @@
 
 **Тело запроса:**
 
-```{
+```
+{
 "price": 599.99,
 "color": "green",
 "manufacturer": "dyson",

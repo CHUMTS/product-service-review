@@ -1,17 +1,23 @@
 package com.eugen.productservice.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
-import lombok.Data;
+import lombok.*;
 
 import java.math.BigDecimal;
 
-@Data
+@Getter
+@Setter
+@ToString
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Table(name = "products", schema = "public")
 public class Product {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @JsonIgnore
     private Long id;
 
     private BigDecimal price;
@@ -24,7 +30,6 @@ public class Product {
 
     private String type;
 
-    @Column(name = "model_name")
     private String modelName;
 
 }

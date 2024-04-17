@@ -4,7 +4,7 @@
 
 Для запуска приложения с помощью Docker Compose выполните следующие шаги:
 
-1. Склонируйте репозиторий: `git clone https://github.com/your-repo.git`
+1. Склонируйте репозиторий: `git clone https://github.com/CHUMTS/product-service-review`
 2. Перейдите в директорию проекта и запустите Docker Compose для поднятия Postgres: `docker-compose up`
 
 ## Запуск с помощью Gradle

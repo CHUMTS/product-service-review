@@ -1,0 +1,20 @@
+spring.application.name: product-service
+spring:
+  datasource:
+    url: jdbc:postgresql://${PG_HOST:localhost}:5432/products_db
+    username: ${PG_USERNAME:user}
+    password: ${PG_PASSWORD:password}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+  liquibase:
+    change-log: classpath:db/changelog-master.xml
+    drop-first: true
+
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: DEBUG
